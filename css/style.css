@@ -1,0 +1,86 @@
+/* ******************REGOLE GENERALI************************ */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ********************REGOLE MAIN************************ */
+main{
+    background-color: black;
+    padding: 50px;
+    
+}
+
+.btn{
+    background-color: rgb(143, 221, 221);
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    height: fit-content;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.cont_grid{
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(43, 39, 39);
+    
+    
+}
+
+.bord{
+    border: 3px solid white;
+    color: white;
+}
+
+.none{
+    display: none;
+}
+
+.col10{
+    width: 10%;
+    height: 10%;
+    
+    
+}
+
+.col9{
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    
+}
+
+.col7{
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+
+.clicked{
+    background-color: aqua;
+}
+
+.lock{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*******regole form*********/
+form{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
