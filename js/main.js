@@ -8,6 +8,7 @@ const level = document.getElementById("level");
 const start = document.querySelector(".btn");
 const form = document.querySelector("form");
 const container = document.querySelector(".cont_grid");
+const score = document.querySelector(".cont_score")
 
 
 
@@ -41,6 +42,9 @@ start.addEventListener("click",
         console.log(bomba);
        
         // Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
+
+         // Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe.
+                    // Attenzione: nella stessa cella può essere posizionata al massimo una bomba, perciò nell’array delle bombe non potranno esserci due numeri uguali.
         const lock = document.querySelectorAll(".lock")
         for (let i = 0; i < lock.length; i++) {
             const lockIesimo = lock[i];
@@ -50,17 +54,11 @@ start.addEventListener("click",
                     
                     if (bomba.includes(parseInt(lockIesimo.textContent))) {
                         lockIesimo.classList.add("red")
+                        score.classList.remove("none");
                         
                     }else{
                         lockIesimo.classList.add("clicked");
-                    }
-                    
-                    
-                    // console.log(lock);
-
-                     // Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe.
-                    // Attenzione: nella stessa cella può essere posizionata al massimo una bomba, perciò nell’array delle bombe non potranno esserci due numeri uguali.
-                   
+                    }               
                     
 
                 }
@@ -82,12 +80,6 @@ start.addEventListener("click",
 
 
 ////////////////// PARTE 2/////////////////////////////
-
-
-// Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe.
-// Attenzione: nella stessa cella può essere posizionata al massimo una bomba, perciò nell’array delle bombe non potranno esserci due numeri uguali.
-// let bomb = sequenzaNumeriRandom(1,16);
-// console.log(bomb);
 
 
 
