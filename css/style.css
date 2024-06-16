@@ -74,6 +74,10 @@ main{
     justify-content: center;
 }
 
+.red{
+    background-color: red;
+}
+
 /*******regole form*********/
 form{
     display: flex;
