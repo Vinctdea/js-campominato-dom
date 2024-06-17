@@ -5,17 +5,14 @@
 
 // selezione difficolta e start al click
 const level = document.getElementById("level");
-const start = document.querySelector(".btn");
+const start = document.getElementById("start");
 const form = document.querySelector("form");
 const container = document.querySelector(".cont_grid");
-const score = document.querySelector(".cont_score")
+const score = document.querySelector(".cont_score");
+const restart = document.getElementById("restart");
+const punteggio = document.getElementById("punteggio");
 
-
-
-
-
-
-
+let contatore= 0;
 
 // click genera livello
 start.addEventListener("click",
@@ -48,16 +45,23 @@ start.addEventListener("click",
         const lock = document.querySelectorAll(".lock")
         for (let i = 0; i < lock.length; i++) {
             const lockIesimo = lock[i];
-           
+            
+            
+            
             lockIesimo.addEventListener("click",
-                function () {
-                    
+                function () {                   
+                    contatore = contatore+1;
                     if (bomba.includes(parseInt(lockIesimo.textContent))) {
-                        lockIesimo.classList.add("red")
+                        lockIesimo.classList.add("red");
                         score.classList.remove("none");
+                        punteggio.innerHTML= `il tuo punteggio è: ${contatore}` 
+                        
+                                                
                         
                     }else{
                         lockIesimo.classList.add("clicked");
+                                               
+                        
                     }               
                     
 
@@ -68,15 +72,16 @@ start.addEventListener("click",
         
             
     }  
-    
-    
-
-
-
-
-
-   
+       
 );                                       
+
+
+// click a termine partita per restart
+restart.addEventListener("click",
+    function(){
+        window.location.reload()
+    }
+)
 
 
 ////////////////// PARTE 2/////////////////////////////
